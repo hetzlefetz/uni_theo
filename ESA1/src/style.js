@@ -67,8 +67,18 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 15px;
     margin: 5px 0 0;
   }
+  .success-message {
+    color: #4CAF50;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 5px 0 0;
+  }
   
   .input-group .error-message {
+    display: none;
+  }
+  .input-group .success-message {
     display: none;
   }
   
@@ -77,6 +87,10 @@ export const GlobalStyle = createGlobalStyle`
   
   .error label {
     color: #cc0033;
+  },
+
+  .success label {
+    color: #cc0033;
   }
   
   .error input[type=text] {
@@ -84,10 +98,21 @@ export const GlobalStyle = createGlobalStyle`
     border: 1px solid #cc0033;
     outline: none;
   }
+
+  .success input[type=text] {
+    background-color: #4CAF5030;
+    border: 1px solid #4CAF50;
+    outline: none;
+  }
   
   .error .error-message {
     display: inline-block;
   }
+
+  .success .success-message {
+    display: inline-block;
+  }
+  
   
 `;
 

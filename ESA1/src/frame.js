@@ -117,6 +117,7 @@ export const Frame = () => {
     setStepsEnabled(true);
   };
   const resetColors = () => {
+    setInputClass('input-group');
     var nodes = document.getElementsByClassName('node');
     for (var i = 0; i < nodes.length; i++) {
       nodes[i].style.stroke = 'black';
@@ -143,7 +144,7 @@ export const Frame = () => {
   };
   const onTestWord = () => {
     if (testWord(currentWord)) {
-      setInputClass('input-group');
+      setInputClass('input-group success');
     } else {
       setInputClass('input-group error');
     }
@@ -165,6 +166,7 @@ export const Frame = () => {
           <div className="error-message">
             Das angegebene Wort ist nicht gültig
           </div>
+          <div className="success-message">Das angegebene Wort ist gültig</div>
         </div>
         <button
           disabled={currentAppState != AppState.STOPPED}
