@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { GraphThingy } from "./graph";
+import { Frame } from "./frame";
 const root = document.querySelector("#asdf");
-ReactDOM.render(<GraphThingy />, root);
+ReactDOM.render(<Frame />, root);

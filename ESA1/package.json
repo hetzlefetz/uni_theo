@@ -2,9 +2,9 @@
   "name": "react-basic-template",
   "version": "1.0.0",
   "description": "",
-  "main": "db.js",
+  "main": "index.js",
   "dependencies": {
-    "@babel/core": "^7.4.3",
+    "@babel/core": "^7.14.0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
@@ -14,12 +14,14 @@
     "@babel/plugin-proposal-throw-expressions": "^7.2.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-syntax-import-meta": "^7.2.0",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.13.15",
     "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.14.0",
     "babel-loader": "^8.0.5",
     "d3": "^5.5.0",
     "express": "^4.16.4",
     "install": "^0.13.0",
+    "intro.js-react": "^0.3.0",
     "npm": "^7.11.1",
     "react": "^16.8.6",
     "react-d3-graph": "^2.6.0",
@@ -29,13 +31,17 @@
     "webpack-cli": "^3.3.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.14.1",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^5.2.4",
+    "style-loader": "^2.0.0",
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
     "postinstall": "npm run webpack",
     "webpack": "webpack",
     "webpack:dev": "npm run webpack -- --mode=development --watch",
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server --mode=development"
   },
   "keywords": [],
   "author": "",
