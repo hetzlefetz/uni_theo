@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ESA 2 : Grammatik</title>
+  </head>
+  <body>
+    <h1>Das ist die Grammatik:</h1>
+    <p>G = {V, Σ , R , S} mit</p>
+    <ul>
+      <li>V = {A,O,Z}</li>
+      <li>Σ= {"+","-","+","/"}</li>
+      <li>R = { siehe Tabelle}</li>
+      <li>S = {A|Z}</li>
+    </ul>
+    <p>A= Ausdruck, O = Operator (+ | - | * | /), Z = Zahl (0...9)</p>
+    <table>
+      <thead>
+        <tr>
+          <td>Nr.</td>
+          <td>Regel</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>foo</td>
+        </tr>
+      </tbody>
+    </table>
+    <button>Generate Valid Expression</button>
+    <button>Generate Valid Expression (Stepwise)</button>
+    <button>Next</button>
+    <button>Generate Invalid Expression</button>
+    <input type="range" min="0" max="5" value="1">Geschwindigkeit</input>
+    <a href="/doc">Documentation</a>
+  </body>
+  <script src="./main.js"></script>
+</html>
