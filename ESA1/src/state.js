@@ -172,3 +172,66 @@ export const testWord = (word) => {
     return false;
   }
 };
+
+const test = (word) => {
+  const chars = word.split('');
+  for (var i = 0; i < chars.length; i++) {
+    switch (chars[i].toUpperCase()) {
+      case 'B': {
+        if (currentState == 'q0') {
+          currentState = 'q1';
+          continue;
+        } else {
+          return false;
+        }
+      }
+      case 'T': {
+        if (currentState == 'q1') {
+          currentState = 'q2';
+        } else {
+          return false;
+        }
+      }
+      case 'S': {
+        if (currentState == 'q2') {
+          currentState = 'q2';
+          continue;
+        } else if (currentState == 'q5') {
+          currentState = 'q6';
+        } else {
+          return false;
+        }
+      }
+
+      case 'X': {
+        if (currentState == 'q2') {
+          currentState = 'q5';
+          continue;
+        } else if (currentState == 'q5') {
+          currentState = 'q3';
+        } else {
+          return false;
+        }
+      }
+      case 'V': {
+        if (currentState == 'q3') {
+          currentState = 'q4';
+          continue;
+        } else if (currentState == 'q4') {
+          currentState = 'q6';
+        } else {
+          return false;
+        }
+      }
+      case 'E': {
+        if (currentState == 'q6') {
+          currentState = 'q7';
+          continue;
+        } else {
+          return false;
+        }
+      }
+    }
+  }
+  return currentState == q7;
+};
