@@ -7,13 +7,13 @@
     <h1>Das ist die Grammatik:</h1>
     <p>G = {V, Σ , R , S} mit</p>
     <ul>
-      <li>V = {A,O,Z}</li>
+      <li>V = {S,A,O,Z}</li>
       <li>Σ= {"+","-","+","/"}</li>
       <li>R = { siehe Tabelle}</li>
-      <li>S = {A|Z}</li>
+      <li>S = {A}</li>
     </ul>
     <p>A= Ausdruck, O = Operator (+ | - | * | /), Z = Zahl (0...9)</p>
-    <table>
+    <table id="stateTable">
       <thead>
         <tr>
           <td>Nr.</td>
@@ -23,16 +23,31 @@
       <tbody>
         <tr>
           <td>1</td>
-          <td>foo</td>
+          <td>S→SOS|A|Z</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Z→0...9</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>O→+|-|*|/</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>A→(S)</td>
         </tr>
       </tbody>
     </table>
-    <button>Generate Valid Expression</button>
-    <button>Generate Valid Expression (Stepwise)</button>
-    <button>Next</button>
-    <button>Generate Invalid Expression</button>
-    <input type="range" min="0" max="5" value="1">Geschwindigkeit</input>
-    <a href="/doc">Documentation</a>
+    <button onclick="genValid()">Generate Valid Expression</button>
+    <button onclick="genStepwise()">
+      Generate Valid Expression (Stepwise)
+    </button>
+    <button onclick="next()">Next</button>
+    <button onclick="genInvalid()">Generate Invalid Expression</button>
+    <input type="range" min="0" max="5" value="1" />Geschwindigkeit
+    <a href="./doc.html">Documentation</a>
+    <div id="output"></div>
+    <script src="./main.js"></script>
   </body>
-  <script src="./main.js"></script>
 </html>

@@ -2,3 +2,21 @@
   font-size: 20px;
   font-family: sans-serif;
 }
+
+#stateTable {
+  border-collapse: collapse;
+  font-size: 12px;
+  width: 100%;
+}
+#stateTable th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+#stateTable td,
+#stateTable th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
