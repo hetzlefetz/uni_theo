@@ -17,13 +17,34 @@ var states = {
 
 function genValid() {
   var currentState = intialState;
-  var result = '';
-  var cont = true;
-  while (cont) {
-    result += nextState(currentState);
-    cont = !isTerminal(result);
+
+  while (!isTerminal(currentState)) {
+    currentState = currentState.replaceAll('S', () => {
+      followers = shuffle(states.S.followers);
+      return followers[0];
+    });
+    currentState = currentState.replaceAll('O', () => {
+      followers = shuffle(states.O.followers);
+      return followers[0];
+    });
+    currentState = currentState.replaceAll('A', () => {
+      followers = shuffle(states.A.followers);
+      return followers[0];
+    });
+    currentState = currentState.replaceAll('Z', () => {
+      return getRandomIntInclusive(0, 9);
+    });
+    if (currentState.length > 1000) {
+      break;
+    }
   }
-  console.log(result);
+  var output = {
+    currentState,
+    numberOpen: (currentState.match(/\(/g) || []).length,
+    numberClosed: (currentState.match(/\)/g) || []).length,
+    isValid: isTerminal(currentState) && eval(currentState),
+  };
+  document.getElementById('output').innerHTML = JSON.stringify(output);
 }
 function isTerminal(value) {
   if (value.includes('A')) return false;
@@ -41,22 +62,28 @@ function nextState(currentState) {
           Math.floor(Math.random() * states.S.followers.length)
         ];
       if (next === 'Z') {
-        return Math.floor(Math.random() * states.Z.followers.length);
+        return states.Z.followers[
+          Math.floor(Math.random() * states.Z.followers.length)
+        ];
       }
       return next;
     }
     case 'Z': {
-      return Math.floor(Math.random() * states.Z.followers.length);
+      return states.Z.followers[
+        Math.floor(Math.random() * states.Z.followers.length)
+      ];
     }
     case 'O': {
-      return Math.floor(Math.random() * states.O.followers.length);
+      return states.O.followers[
+        Math.floor(Math.random() * states.O.followers.length)
+      ];
     }
     case 'A': {
-      return (
-        '(' +
-        nextState(currentState.substring(1, currentState.length - 1)) +
-        ')'
-      );
+      if (currentState == 'S') {
+        return '(S)';
+      }
+      ('((Z))');
+      return '(' + nextState(currentState) + ')';
     }
     case 'SOS': {
       return nextState('S') + nextState('O') + nextState('S');
@@ -74,4 +101,28 @@ function next() {
 }
 function genInvalid() {
   alert('genInvalid');
+}
+
+function shuffle(array) {
+  var m = array.length,
+    t,
+    i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
