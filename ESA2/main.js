@@ -153,6 +153,7 @@ async function stepClick() {
     'Generierter Ausdruck : \n Auf > clicken um den nächsten schritt durchzuführen';
   currentState = nextState(currentState);
   if (isTerminal(currentState)) {
+    markLastRow();
     disableButton('btn-step');
     alert('Ausdruck erfolgreich generiert');
     document.getElementById('output').innerHTML =
@@ -198,16 +199,17 @@ async function genValid() {
     isValid: isTerminal(currentState) && eval(currentState),
   };
   if (!pauseRequested) {
-    var table = document.getElementById('output-table');
-    var rows = table.getElementsByTagName('tr');
-    if (output.isValid) {
-      rows[rows.length - 1].className = 'success-row';
-    } else {
-      rows[rows.length - 1].className = 'error-row';
-    }
+    markLastRow();
   }
   return output;
 }
+function markLastRow() {
+  var table = document.getElementById('output-table');
+  var rows = table.getElementsByTagName('tr');
+
+  rows[rows.length - 1].className = 'success-row';
+}
+
 function prependOps(op, operations) {
   for (var i = 0; i < operations.length; i++) {
     operations[i] = op + '->' + operations[i];
@@ -271,14 +273,28 @@ function nextState(state) {
   }
   return state;
 }
-function genStepwise() {
-  alert('genStep');
-}
-function next() {
-  alert('next');
-}
+
 function genInvalid() {
-  alert('genInvalid');
+  var state = currentState;
+  while (!isTerminal(state)) {
+    state = nextState(state);
+    if (currentState.length > 10000) {
+      alert('Maximale länge überschritten');
+      break;
+    }
+    if (pauseRequested) {
+      break;
+    }
+  }
+  if (state.length == 1) {
+    alert('Ungültiger ausdruck: -');
+  } else {
+    state = removeByIndex(getRandomIntInclusive(0, state.length - 1));
+    alert('Ungültiger ausdruck: ' + state);
+  }
+}
+function removeByIndex(str, index) {
+  return str.slice(0, index) + str.slice(index + 1);
 }
 /**
  *
