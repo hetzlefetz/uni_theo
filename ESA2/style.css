@@ -20,3 +20,17 @@
   border: 1px solid #ddd;
   padding: 4px;
 }
+
+pre {
+  border-radius: 20px;
+
+  background-color: lightgray;
+  font-family: monospace;
+}
+
+.success-row {
+  background-color: lightgreen;
+}
+.error-row {
+  background-color: lightcoral;
+}

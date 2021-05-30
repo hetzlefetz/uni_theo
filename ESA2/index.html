@@ -1,53 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>ESA 2 : Grammatik</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href=" https://unpkg.com/intro.js/minified/introjs.min.css"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
+  <header>
+    <title>ESA 2 : Grammatik</title>
+  </header>
   <body>
-    <h1>Das ist die Grammatik:</h1>
-    <p>G = {V, Σ , R , S} mit</p>
-    <ul>
-      <li>V = {S,A,O,Z}</li>
-      <li>&sum;= {"+","-","+","/"}</li>
-      <li>R = { siehe Tabelle}</li>
-      <li>S = {A}</li>
-    </ul>
-    <p>A= Ausdruck, O = Operator (+ | - | * | /), Z = Zahl (0...9)</p>
-    <table id="stateTable">
-      <thead>
-        <tr>
-          <td>Nr.</td>
-          <td>Regel</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>S→SOS|A|Z</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Z→0...9</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>O→+|-|*|/</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>A→(S)</td>
-        </tr>
-      </tbody>
-    </table>
-    <button onclick="genValid()">Generate Valid Expression</button>
-    <button onclick="genStepwise()">
-      Generate Valid Expression (Stepwise)
-    </button>
-    <button onclick="next()">Next</button>
-    <button onclick="genInvalid()">Generate Invalid Expression</button>
-    <input type="range" min="0" max="5" value="1" />Geschwindigkeit
-    <a href="./doc.html">Documentation</a>
-    <div id="output"></div>
-    <script src="./main.js"></script>
+    <div class="container">
+      <h1>Projektaufgabe P2: Grammatik für arithmethische Ausdrücke</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <label for="animationgroup">Animation</label>
+            <div
+              id="animationgroup"
+              class="btn-group"
+              role="group"
+              aria-label="Basic example"
+            >
+              <button
+                id="btn-play"
+                type="button"
+                class="btn btn-primary"
+                onclick="playClick()"
+              >
+                <i class="bi bi-play-fill"></i>
+              </button>
+              <button
+                id="btn-pause"
+                type="button"
+                class="btn btn-secondary"
+                onclick="pauseClick()"
+              >
+                <i class="bi bi-pause-fill"></i>
+              </button>
+              <button
+                id="btn-step"
+                type="button"
+                class="btn btn-secondary"
+                onclick="stepClick()"
+              >
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <button
+                id="btn-cancel"
+                type="button"
+                class="btn btn-secondary"
+                onClick="window.location.reload();"
+              >
+                <i class="bi bi-x-circle"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <label for="drp-speed">Geschwindigkeit</label>
+            <select id="drp-speed" class="form-select">
+              <option value="5000">Langsam</option>
+              <option selected value="1000">Normal</option>
+              <option value="1">Schnell</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="btn-genInvalid">Sonstiges</label>
+            <button
+              id="btn-genInvalid"
+              onclick="genInvalid()"
+              class="btn btn-danger"
+            >
+              Ungültiger Ausdruck
+            </button>
+          </div>
+          <div class="col">
+            <label for="btn-tour">Intro und Dokumentation</label>
+            <button id="btn-tour" onclick="tourClick();" class="btn btn-info">
+              Tour starten
+            </button>
+          </div>
+          <div class="col">
+            <label for="btn-doc">&nbsp;</label>
+            <button
+              id="btn-doc"
+              onclick="window.location.href='doc.html';"
+              class="btn btn-info"
+            >
+              Dokumentation öffnen
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div id="output">
+              Generierter Ausdruck: Play Drücken um einen Ausdruck zu generieren
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <table id="output-table" class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Schritt #</th>
+                  <th scope="col">Alter Zustand</th>
+                  <th scope="col">Neuer Zustand</th>
+                  <th scope="col">Regel</th>
+                </tr>
+              </thead>
+              <tbody id="output-table-body">
+                <tr class="success">
+                  <td colspan="4">
+                    Simulation mit Klick auf Play starten um Tabelle zu füllen
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-auto float-right-top">
+            <pre id="grammar"><code>    G = {V, Σ , R , S} mit
+    V = {F,A,O,Z}
+    &sum;= {+,-,*,/,0,1,2,3,4,5,6,7,8,9}
+    R = {
+      F→FOF|A|Z,
+      Z→0...9,
+      O→+|-|*|/,
+      A→(F),
+    }
+    S = {F}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <script src="./main.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+    </div>
   </body>
 </html>
