@@ -224,7 +224,7 @@ function isTerminal(value) {
   return true;
 }
 
-function nextState(state) {
+function nextState(state, addToTable = true) {
   var oldState = state;
   var operations = [];
   state = state.replaceAll('F', () => {
@@ -232,7 +232,7 @@ function nextState(state) {
     operations.push(followers[0]);
     return followers[0];
   });
-  if (operations.length > 0) {
+  if (addToTable && operations.length > 0) {
     prependOps('F', operations);
     insertRow(++currentStep, operations.join(','), oldState, state);
   }
@@ -243,7 +243,7 @@ function nextState(state) {
     operations.push(followers[0]);
     return followers[0];
   });
-  if (operations.length > 0) {
+  if (addToTable && operations.length > 0) {
     prependOps('O', operations);
     insertRow(++currentStep, operations.join(','), oldState, state);
   }
@@ -255,7 +255,7 @@ function nextState(state) {
     operations.push(followers[0]);
     return followers[0];
   });
-  if (operations.length > 0) {
+  if (addToTable && operations.length > 0) {
     prependOps('A', operations);
     insertRow(++currentStep, operations.join(','), oldState, state);
   }
@@ -267,7 +267,7 @@ function nextState(state) {
     operations.push(val);
     return val;
   });
-  if (operations.length > 0) {
+  if (addToTable && operations.length > 0) {
     prependOps('Z', operations);
     insertRow(++currentStep, operations.join(','), oldState, state);
   }
@@ -275,10 +275,17 @@ function nextState(state) {
 }
 
 function genInvalid() {
+  pauseRequested = false;
+  if (appState != appStates.PAUSED) {
+    clearTable(); //Only clear table if we start a new sim
+  }
+  appState = appStates.RUNNING;
+  setupButtonStates();
+
   var state = currentState;
   while (!isTerminal(state)) {
-    state = nextState(state);
-    if (currentState.length > 10000) {
+    state = nextState(state, false);
+    if (state.length > 10000) {
       alert('Maximale länge überschritten');
       break;
     }
@@ -287,11 +294,14 @@ function genInvalid() {
     }
   }
   if (state.length == 1) {
-    alert('Ungültiger ausdruck: -');
+    state = '-';
   } else {
     state = removeByIndex(getRandomIntInclusive(0, state.length - 1));
-    alert('Ungültiger ausdruck: ' + state);
   }
+  document.getElementById('output').innerHTML =
+    'Generierter ungültiger Ausdruck : \n' + state;
+  appState = appStates.STOPPED;
+  setupButtonStates();
 }
 function removeByIndex(str, index) {
   return str.slice(0, index) + str.slice(index + 1);
