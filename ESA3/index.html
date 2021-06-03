@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href=" https://unpkg.com/intro.js/minified/introjs.min.css"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <header>
+    <title>ESA 2 : Grammatik</title>
+  </header>
+  <button onclick="dostuff();">Click Me!</button>
+  <body>
+    <div class="container">
+      <h1>
+        Projektaufgabe P3: Kellerautomat zu überprüfung generierter
+        arithmetischer ausdrücke
+      </h1>
+      <div class="container-fluid" style="width: 300px; height: 300px">
+        <svg
+          width="667px"
+          height="454px"
+          style="background-color: rgb(255, 255, 255)"
+          version="1.1"
+          viewBox="-.5 -.5 667 454"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        >
+          <path
+            d="m133 211 219-80.3"
+            pointer-events="stroke"
+            stroke-miterlimit="10"
+            style="fill: none; stroke-miterlimit: 10; stroke: #000"
+          />
+          <path
+            d="m356 129-5.37 5.69.44-3.89-2.85-2.68z"
+            pointer-events="all"
+            stroke-miterlimit="10"
+            style="stroke-miterlimit: 10; stroke: #000"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 229px;
+                    padding-top: 179px;
+                    width: 1px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        background-color: #ffffff;
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 11px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: nowrap;
+                      "
+                      >Z,e-&gt;e</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="229"
+                y="183"
+                font-size="11px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 11px;
+                  text-anchor: middle;
+                "
+              >
+                Z,e-&gt;e
+              </text>
+            </switch>
+          </g>
+          <path
+            d="m133 236 217 65.2"
+            pointer-events="stroke"
+            stroke-miterlimit="10"
+            style="fill: none; stroke-miterlimit: 10; stroke: #000"
+          />
+          <path
+            d="m356 303-7.71 1.34 2.68-2.84-.67-3.86z"
+            pointer-events="all"
+            stroke-miterlimit="10"
+            style="stroke-miterlimit: 10; stroke: #000"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 223px;
+                    padding-top: 264px;
+                    width: 1px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        background-color: #ffffff;
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 11px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: nowrap;
+                      "
+                      >(,e-&gt;X</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="223"
+                y="267"
+                font-size="11px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 11px;
+                  text-anchor: middle;
+                "
+              >
+                (,e-&gt;X
+              </text>
+            </switch>
+          </g>
+          <circle
+            cx="95"
+            cy="225"
+            r="40"
+            pointer-events="all"
+            style="fill: #fff; stroke: #000"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 56px;
+                    padding-top: 225px;
+                    width: 78px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 12px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: normal;
+                        word-wrap: normal;
+                      "
+                      >q1</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="95"
+                y="229"
+                font-size="12px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 12px;
+                  text-anchor: middle;
+                "
+              >
+                q1
+              </text>
+            </switch>
+          </g>
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 356px;
+                    padding-top: 315px;
+                    width: 78px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 12px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: normal;
+                        word-wrap: normal;
+                      "
+                      >q3</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+            </switch>
+          </g>
+          <rect
+            width="50"
+            height="30"
+            pointer-events="all"
+            style="fill: none"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 25px;
+                    padding-top: 15px;
+                    width: 1px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 12px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: nowrap;
+                      "
+                      >1+2 <xhtml:br />(4+(5))
+                    </xhtml:div>
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="25"
+                y="19"
+                font-size="12px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 12px;
+                  text-anchor: middle;
+                "
+              >
+                1+2...
+              </text>
+            </switch>
+          </g>
+          <path
+            d="m395 355-8.04 40.2q-1.96 9.81-8.65 17.2l-5.65 6.29q-5.66 6.28-14.7 10.6l-23.9 11.4q-9.03 4.3-15-3.7l-18-24q-6-8-1.53-16.9l11.1-22.1q4.47-8.94 13.7-12.8l36.6-15.4"
+            pointer-events="stroke"
+            stroke-miterlimit="10"
+            style="fill: none; stroke-miterlimit: 10; stroke: #000"
+          />
+          <path
+            d="m366 344-5.09 5.93.25-3.9-2.96-2.55z"
+            pointer-events="all"
+            stroke-miterlimit="10"
+            style="stroke-miterlimit: 10; stroke: #000"
+          />
+          <g transform="translate(5.25 -8.31)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 325px;
+                    padding-top: 436px;
+                    width: 1px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        background-color: #ffffff;
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 11px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: nowrap;
+                      "
+                    >
+                      <xhtml:span
+                        style="
+                          background-color: rgb(248, 249, 250);
+                          font-size: 12px;
+                        "
+                        >(,e-&gt;X</xhtml:span
+                      >
+                    </xhtml:div>
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="325"
+                y="439"
+                font-size="11px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 11px;
+                  text-anchor: middle;
+                "
+              >
+                (,e-&gt;X
+              </text>
+            </switch>
+          </g>
+          <path
+            d="m395 275v-114"
+            pointer-events="stroke"
+            stroke-miterlimit="10"
+            style="fill: none; stroke-miterlimit: 10; stroke: #000"
+          />
+          <path
+            d="m395 156 3.5 7-3.5-1.75-3.5 1.75z"
+            pointer-events="all"
+            stroke-miterlimit="10"
+            style="stroke-miterlimit: 10; stroke: #000"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 395px;
+                    padding-top: 215px;
+                    width: 1px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        background-color: #ffffff;
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 11px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: nowrap;
+                      "
+                      >Z,e-&gt;e</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="395"
+                y="219"
+                font-size="11px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 11px;
+                  text-anchor: middle;
+                "
+              >
+                Z,e-&gt;e
+              </text>
+            </switch>
+          </g>
+          <circle
+            cx="625"
+            cy="115"
+            r="40"
+            pointer-events="all"
+            style="fill: #fff; stroke: #000"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 586px;
+                    padding-top: 115px;
+                    width: 78px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 12px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: normal;
+                        word-wrap: normal;
+                      "
+                      >q4</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="625"
+                y="119"
+                font-size="12px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 12px;
+                  text-anchor: middle;
+                "
+              >
+                q4
+              </text>
+            </switch>
+          </g>
+          <path
+            d="m435 115h144"
+            pointer-events="stroke"
+            stroke-miterlimit="10"
+            style="fill: none; stroke-miterlimit: 10; stroke: #000"
+          />
+          <path
+            d="m584 115-7 3.5 1.75-3.5-1.75-3.5z"
+            pointer-events="all"
+            stroke-miterlimit="10"
+            style="stroke-miterlimit: 10; stroke: #000"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 532px;
+                    padding-top: 118px;
+                    width: 1px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        background-color: #ffffff;
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 11px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: nowrap;
+                      "
+                      >O,e-&gt;e</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="532"
+                y="122"
+                font-size="11px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 11px;
+                  text-anchor: middle;
+                "
+              >
+                O,e-&gt;e
+              </text>
+            </switch>
+          </g>
+          <path
+            d="m423 143v137"
+            pointer-events="stroke"
+            stroke-miterlimit="10"
+            style="fill: none; stroke-miterlimit: 10; stroke: #000"
+          />
+          <path
+            d="m423 286-3.5-7 3.5 1.75 3.5-1.75z"
+            pointer-events="all"
+            stroke-miterlimit="10"
+            style="stroke-miterlimit: 10; stroke: #000"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 424px;
+                    padding-top: 195px;
+                    width: 1px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        background-color: #ffffff;
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 11px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: nowrap;
+                      "
+                      >),X-&gt;e</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="424"
+                y="198"
+                font-size="11px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 11px;
+                  text-anchor: middle;
+                "
+              >
+                ),X-&gt;e
+              </text>
+            </switch>
+          </g>
+          <path
+            d="m625 155-185 156"
+            pointer-events="stroke"
+            stroke-miterlimit="10"
+            style="fill: none; stroke-miterlimit: 10; stroke: #000"
+          />
+          <path
+            d="m436 314 3.1-7.19.91 3.81 3.59 1.55z"
+            pointer-events="all"
+            stroke-miterlimit="10"
+            style="stroke-miterlimit: 10; stroke: #000"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 539px;
+                    padding-top: 227px;
+                    width: 1px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        background-color: #ffffff;
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 11px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: nowrap;
+                      "
+                      >(,e-&gt;X</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="539"
+                y="230"
+                font-size="11px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 11px;
+                  text-anchor: middle;
+                "
+              >
+                (,e-&gt;X
+              </text>
+            </switch>
+          </g>
+          <path
+            d="m597 86.7h-167"
+            pointer-events="stroke"
+            stroke-miterlimit="10"
+            style="fill: none; stroke-miterlimit: 10; stroke: #000"
+          />
+          <path
+            d="m424 86.7 7-3.5-1.75 3.5 1.75 3.5z"
+            pointer-events="all"
+            stroke-miterlimit="10"
+            style="stroke-miterlimit: 10; stroke: #000"
+          />
+          <g transform="translate(-.5 -.5)">
+            <switch>
+              <foreignObject
+                width="100%"
+                height="100%"
+                pointer-events="none"
+                style="overflow: visible; text-align: left"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+              >
+                <xhtml:div
+                  style="
+                    align-items: unsafe center;
+                    display: flex;
+                    height: 1px;
+                    justify-content: unsafe center;
+                    margin-left: 493px;
+                    padding-top: 86px;
+                    width: 1px;
+                  "
+                >
+                  <xhtml:div
+                    style="
+                      box-sizing: border-box;
+                      font-size: 0;
+                      text-align: center;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        background-color: #ffffff;
+                        color: #000000;
+                        display: inline-block;
+                        font-family: Helvetica;
+                        font-size: 11px;
+                        line-height: 1.2;
+                        pointer-events: all;
+                        white-space: nowrap;
+                      "
+                      >Z,e-&gt;e</xhtml:div
+                    >
+                  </xhtml:div>
+                </xhtml:div>
+              </foreignObject>
+              <text
+                x="493"
+                y="89"
+                font-size="11px"
+                style="
+                  fill: #000000;
+                  font-family: Helvetica;
+                  font-size: 11px;
+                  text-anchor: middle;
+                "
+              >
+                Z,e-&gt;e
+              </text>
+            </switch>
+          </g>
+          <g id="node_q2">
+            <circle
+              cx="395"
+              cy="115"
+              r="40"
+              pointer-events="all"
+              style="fill: #fff; stroke: #000"
+            />
+            <g transform="translate(-.5 -.5)">
+              <switch>
+                <foreignObject
+                  width="100%"
+                  height="100%"
+                  pointer-events="none"
+                  style="overflow: visible; text-align: left"
+                  requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                >
+                  <xhtml:div
+                    style="
+                      align-items: unsafe center;
+                      display: flex;
+                      height: 1px;
+                      justify-content: unsafe center;
+                      margin-left: 356px;
+                      padding-top: 115px;
+                      width: 78px;
+                    "
+                  >
+                    <xhtml:div
+                      style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      "
+                    >
+                      <xhtml:div
+                        style="
+                          color: #000000;
+                          display: inline-block;
+                          font-family: Helvetica;
+                          font-size: 12px;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        "
+                        >q2</xhtml:div
+                      >
+                    </xhtml:div>
+                  </xhtml:div>
+                </foreignObject>
+                <text
+                  x="395"
+                  y="119"
+                  font-size="12px"
+                  style="
+                    fill: #000000;
+                    font-family: Helvetica;
+                    font-size: 12px;
+                    text-anchor: middle;
+                  "
+                >
+                  q2
+                </text>
+              </switch>
+            </g>
+            <circle
+              cx="395"
+              cy="115"
+              r="30"
+              pointer-events="all"
+              style="fill: none; stroke: #000"
+            />
+          </g>
+          <circle
+            cx="395"
+            cy="315"
+            r="40"
+            pointer-events="all"
+            style="fill: #fff; stroke: #000"
+          />
+          <text
+            transform="translate(-.5 -.5)"
+            x="395"
+            y="319"
+            font-size="12px"
+            style="
+              fill: #000000;
+              font-family: Helvetica;
+              font-size: 12px;
+              text-anchor: middle;
+            "
+          >
+            q3
+          </text>
+          <circle
+            cx="395"
+            cy="315"
+            r="30"
+            pointer-events="all"
+            style="fill: none; stroke: #000"
+          />
+        </svg>
+      </div>
+      <script src="./automaton.js"></script>
+      <script src="./main.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+    </div>
+  </body>
+</html>

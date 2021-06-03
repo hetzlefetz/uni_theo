@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ESA 2 : Grammatik</title>
+  </head>
+  <body>
+    <h1>
+      Projektaufgabe P2: Grammatik für arithmethische Ausdrücke - Dokumentation
+    </h1>
+    <p>
+      Es soll eine Grammatik für arithmethische Ausdrücke dargestellt werden.
+      Folgende randbedingungen sollen gelten:
+    </p>
+    <ul>
+      <li>Es werden nur einstellige Zahlen betrachtet</li>
+      <li>Es sollen die Operanden +, -, * und / erzuegt werden</li>
+      <li>Klammern können beliebig tief geschachtelt werden</li>
+      <li>
+        Folgende Abkürzungen sollen verwendet werden:
+        <ul>
+          <li>A - Ausdruck</li>
+          <li>O - Operator (+ | - | * | /)</li>
+          <li>Z - Zahl (0...9)</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Daraus ergibt sich folgende Grammatik:</p>
+    <pre>
+    G = {V, Σ , R , S} mit
+    V = {S,A,O,Z}
+    &sum;= {+,-,*,/,0,1,2,3,4,5,6,7,8,9}
+    R = {
+      F→FOF|A|Z,
+      Z→0...9,
+      O→+|-|*|/,
+      A→(F),
+    }
+    S = {F}</pre
+    >
+    <h2>Umsetzung</h2>
+    <p>
+      Die Applikation wurde in Javascript umgesetzt. Hierbei habe ich mir die
+      Funktion <code>string.replaceAll(fn)</code> zu nutze gemacht. Der aufruf
+      mit einem callback, erlaubt es für jeden einzelnen match eines strings ein
+      Wert anzugeben durch den der ursprüngliche Match ersetzt wird.
+    </p>
+    <p>
+      Die Grammatik ist als ein object angelegt welches für jeden Zustand
+      gültige Folgezustände definiert:
+    </p>
+    <pre>
+      var states = {
+      S: {
+        followers: ['FOF', 'A', 'Z'],
+      },
+      Z: {
+        followers: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+      },
+      O: {
+        followers: ['+', '-', '*', '/'],
+      },
+      A: {
+        followers: ['(F)'],
+      },
+    }
+    </pre>
+    <p>
+      Während der generierung wird nun eine Zeichenkette erzeugt in der solange
+      Zeichenweise ersetzt wird bis ein Terminal zustand erkannt wird (Terminal
+      ist hierbei definiert als: Enthält kein A,F,Z oder O mehr)
+    </p>
+    <p>
+      Die Auswahl eines nächsten Zustandes aus dem Array der möglichen
+      Folgezustände wurde wie folgt umgesetzt
+      <pre>
+        [...]
+        state = state.replaceAll('O', () => {
+          followers = shuffle(states.O.followers);
+          ...
+          return followers[0];
+        });
+        [...]
+      </pre>
+      Hierbei ist die shuffle Funktion ein <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle</a>, welcher ein Array zufällig und gleichverteilt permutiert
+    </p>
+    
+
+    <h2>Stack</h2>
+    <h3>Tour: Intro.js</h3>
+    <p>
+      Für die Einführungstour wurde
+      <a href="https://introjs.com/">Intro.js</a> verwendet
+    </p>
+    <h3>Styling: Bootstrap5</h3>
+    <p>
+      Für das Styling der Applikation wurde
+      <a href="https://getbootstrap.com/">Bootstrap 5</a> verwendet
+    </p>
+  </body>
+</html>
