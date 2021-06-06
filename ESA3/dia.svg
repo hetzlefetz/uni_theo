@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
-   xmlns:xhtml="http://www.w3.org/1999/xhtml"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,16 +9,188 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="300"
+   viewBox="0 0 105.83333 79.375002"
    version="1.1"
-   width="667px"
-   height="454px"
-   viewBox="-0.5 -0.5 667 454"
-   style="background-color: rgb(255, 255, 255);"
-   id="svg138"
-   sodipodi:docname="dia.svg"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="dia.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="EmptyTriangleOutL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker6386"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path6384"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.8) translate(-6,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker6318"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.8) translate(-6,0)"
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path6316" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyTriangleOutL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker6182"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path6180"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.8) translate(-6,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker6052"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.8) translate(-6,0)"
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path6050" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyTriangleOutL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker5928"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path5926"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.8) translate(-6,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5810"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.8) translate(-6,0)"
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path5808" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyTriangleOutL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker5698"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path5696"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.8) translate(-6,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5640"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.8) translate(-6,0)"
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path5638" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5810-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5808-5" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5810-6-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleOutL"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5808-5-4" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="2.3851472"
+     inkscape:cy="140.33791"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1887"
+     inkscape:window-height="1048"
+     inkscape:window-x="1882"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
   <metadata
-     id="metadata142">
+     id="metadata5">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -28,577 +201,306 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1858"
-     inkscape:window-height="1057"
-     id="namedview140"
-     showgrid="false"
-     inkscape:zoom="1.7211394"
-     inkscape:cx="437.51207"
-     inkscape:cy="244.49408"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g128" />
-  <defs
-     id="defs2" />
   <g
-     id="g128">
-    <path
-       d="M 132.56,211.24 351.47,130.96"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="path4"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
-    <path
-       d="m 356.4,129.16 -5.37,5.69 0.44,-3.89 -2.85,-2.68 z"
-       stroke-miterlimit="10"
-       pointer-events="all"
-       id="path6"
-       inkscape:connector-curvature="0"
-       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217.62498)">
     <g
-       transform="translate(-0.5,-0.5)"
-       id="g12">
-      <switch
-         id="switch10">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 179px; margin-left: 229px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">Z,e-&gt;e</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="229"
-           y="183"
-           font-size="11px"
-           id="text8"
-           style="font-size:11px;font-family:Helvetica;text-anchor:middle;fill:#000000">Z,e-&gt;e</text>
-      </switch>
-    </g>
-    <path
-       d="m 133.32,236.47 217.27,65.21"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="path14"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
-    <path
-       d="m 355.62,303.18 -7.71,1.34 2.68,-2.84 -0.67,-3.86 z"
-       stroke-miterlimit="10"
-       pointer-events="all"
-       id="path16"
-       inkscape:connector-curvature="0"
-       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
-    <g
-       transform="translate(-0.5,-0.5)"
-       id="g22">
-      <switch
-         id="switch20">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 264px; margin-left: 223px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">(,e-&gt;X</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="223"
-           y="267"
-           font-size="11px"
-           id="text18"
-           style="font-size:11px;font-family:Helvetica;text-anchor:middle;fill:#000000">(,e-&gt;X</text>
-      </switch>
-    </g>
-    <g
-       id="g966">
+       id="node_q1">
       <circle
-         style="fill:#ffffff;stroke:#000000"
-         r="40"
-         id="ellipse24"
-         pointer-events="all"
-         cy="225"
-         cx="95" />
-      <g
-         id="g30"
-         transform="translate(-0.5,-0.5)">
-        <switch
-           id="switch28">
-          <foreignObject
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
-             height="100%"
-             width="100%"
-             pointer-events="none"
-             style="overflow: visible; text-align: left;">
-            <xhtml:div
-               style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 225px; margin-left: 56px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">q1</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <text
-             style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000"
-             id="text26"
-             font-size="12px"
-             y="229"
-             x="95">q1</text>
-        </switch>
-      </g>
-    </g>
-    <g
-       transform="translate(-0.5,-0.5)"
-       id="g46">
-      <switch
-         id="switch44">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 315px; margin-left: 356px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">q3</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-      </switch>
-    </g>
-    <rect
-       x="0"
-       y="0"
-       width="50"
-       height="30"
-       pointer-events="all"
-       id="rect48"
-       style="fill:none;stroke:none" />
-    <g
-       transform="translate(-0.5,-0.5)"
-       id="g54">
-      <switch
-         id="switch52">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 15px; margin-left: 25px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">
-                                1+2
-                                <xhtml:br />
-
-                                (4+(5))
-                            </xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="25"
-           y="19"
-           font-size="12px"
-           id="text50"
-           style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">1+2...</text>
-      </switch>
-    </g>
-    <path
-       d="m 395,355 -8.04,40.19 Q 385,405 378.31,412.43 l -5.65,6.29 Q 367,425 357.97,429.3 l -23.94,11.4 Q 325,445 319,437 l -18,-24 q -6,-8 -1.53,-16.94 l 11.06,-22.12 Q 315,365 324.22,361.13 l 36.62,-15.38"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="path56"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
-    <path
-       d="m 365.68,343.72 -5.09,5.93 0.25,-3.9 -2.96,-2.55 z"
-       stroke-miterlimit="10"
-       pointer-events="all"
-       id="path58"
-       inkscape:connector-curvature="0"
-       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
-    <g
-       transform="translate(5.25171,-8.3058922)"
-       id="g64">
-      <switch
-         id="switch62">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 436px; margin-left: 325px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
-                <xhtml:span
-                   style="font-size: 12px ; background-color: rgb(248 , 249 , 250)">(,e-&gt;X</xhtml:span>
-              </xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="325"
-           y="439"
-           font-size="11px"
-           id="text60"
-           style="font-size:11px;font-family:Helvetica;text-anchor:middle;fill:#000000">(,e-&gt;X</text>
-      </switch>
-    </g>
-    <path
-       d="M 395,275 V 161.37"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="path66"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
-    <path
-       d="m 395,156.12 3.5,7 -3.5,-1.75 -3.5,1.75 z"
-       stroke-miterlimit="10"
-       pointer-events="all"
-       id="path68"
-       inkscape:connector-curvature="0"
-       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
-    <g
-       transform="translate(-0.5,-0.5)"
-       id="g74">
-      <switch
-         id="switch72">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 215px; margin-left: 395px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">Z,e-&gt;e</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="395"
-           y="219"
-           font-size="11px"
-           id="text70"
-           style="font-size:11px;font-family:Helvetica;text-anchor:middle;fill:#000000">Z,e-&gt;e</text>
-      </switch>
-    </g>
-    <g
-       id="g972">
-      <circle
-         style="fill:#ffffff;stroke:#000000"
-         r="40"
-         id="ellipse76"
-         pointer-events="all"
-         cy="115"
-         cx="625" />
-      <g
-         id="g82"
-         transform="translate(-0.5,-0.5)">
-        <switch
-           id="switch80">
-          <foreignObject
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
-             height="100%"
-             width="100%"
-             pointer-events="none"
-             style="overflow: visible; text-align: left;">
-            <xhtml:div
-               style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 115px; margin-left: 586px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">q4</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <text
-             style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000"
-             id="text78"
-             font-size="12px"
-             y="119"
-             x="625">q4</text>
-        </switch>
-      </g>
-    </g>
-    <path
-       d="M 435,115 H 578.63"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="path84"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
-    <path
-       d="m 583.88,115 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
-       stroke-miterlimit="10"
-       pointer-events="all"
-       id="path86"
-       inkscape:connector-curvature="0"
-       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
-    <g
-       transform="translate(-0.5,-0.5)"
-       id="g92">
-      <switch
-         id="switch90">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 118px; margin-left: 532px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">O,e-&gt;e</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="532"
-           y="122"
-           font-size="11px"
-           id="text88"
-           style="font-size:11px;font-family:Helvetica;text-anchor:middle;fill:#000000">O,e-&gt;e</text>
-      </switch>
-    </g>
-    <path
-       d="M 423.28,143.28 V 280.35"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="path94"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
-    <path
-       d="m 423.28,285.6 -3.5,-7 3.5,1.75 3.5,-1.75 z"
-       stroke-miterlimit="10"
-       pointer-events="all"
-       id="path96"
-       inkscape:connector-curvature="0"
-       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
-    <g
-       transform="translate(-0.5,-0.5)"
-       id="g102">
-      <switch
-         id="switch100">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 195px; margin-left: 424px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">),X-&gt;e</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="424"
-           y="198"
-           font-size="11px"
-           id="text98"
-           style="font-size:11px;font-family:Helvetica;text-anchor:middle;fill:#000000">),X-&gt;e</text>
-      </switch>
-    </g>
-    <path
-       d="M 625,155 439.87,310.9"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="path104"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
-    <path
-       d="m 435.86,314.28 3.1,-7.19 0.91,3.81 3.59,1.55 z"
-       stroke-miterlimit="10"
-       pointer-events="all"
-       id="path106"
-       inkscape:connector-curvature="0"
-       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
-    <g
-       transform="translate(-0.5,-0.5)"
-       id="g112">
-      <switch
-         id="switch110">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 227px; margin-left: 539px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">(,e-&gt;X</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="539"
-           y="230"
-           font-size="11px"
-           id="text108"
-           style="font-size:11px;font-family:Helvetica;text-anchor:middle;fill:#000000">(,e-&gt;X</text>
-      </switch>
-    </g>
-    <path
-       d="M 596.72,86.72 H 429.65"
-       stroke-miterlimit="10"
-       pointer-events="stroke"
-       id="path114"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
-    <path
-       d="m 424.4,86.72 7,-3.5 -1.75,3.5 1.75,3.5 z"
-       stroke-miterlimit="10"
-       pointer-events="all"
-       id="path116"
-       inkscape:connector-curvature="0"
-       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
-    <g
-       transform="translate(-0.5,-0.5)"
-       id="g122">
-      <switch
-         id="switch120">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 86px; margin-left: 493px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">Z,e-&gt;e</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="493"
-           y="89"
-           font-size="11px"
-           id="text118"
-           style="font-size:11px;font-family:Helvetica;text-anchor:middle;fill:#000000">Z,e-&gt;e</text>
-      </switch>
+         r="3.6081386"
+         cy="257.41589"
+         cx="18.309923"
+         id="path815"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.52916664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text828"
+         y="258.51868"
+         x="15.770542"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;font-family:monospace;-inkscape-font-specification:'monospace Bold';stroke-width:0.26458332"
+           y="258.51868"
+           x="15.770542"
+           id="tspan826"
+           sodipodi:role="line">q1</tspan></text>
     </g>
     <g
        id="node_q2"
-       inkscape:label="#g954">
+       transform="translate(71.757866,3.3839981)">
       <circle
-         style="fill:#ffffff;stroke:#000000"
-         r="40"
-         id="ellipse32"
-         pointer-events="all"
-         cy="115"
-         cx="395" />
-      <g
-         id="g38"
-         transform="translate(-0.5,-0.5)">
-        <switch
-           id="switch36">
-          <foreignObject
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
-             height="100%"
-             width="100%"
-             pointer-events="none"
-             style="overflow: visible; text-align: left;">
-            <xhtml:div
-               style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 115px; margin-left: 356px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">q2</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <text
-             style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000"
-             id="text34"
-             font-size="12px"
-             y="119"
-             x="395">q2</text>
-        </switch>
-      </g>
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path815-8"
+         cx="-18.541893"
+         cy="237.88593"
+         r="3.6081386" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="-21.006857"
+         y="238.98869"
+         id="text828-3"><tspan
+           sodipodi:role="line"
+           id="tspan826-4"
+           x="-21.006857"
+           y="238.98869"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;font-family:monospace;-inkscape-font-specification:'monospace Bold';stroke-width:0.26458332">q2</tspan></text>
       <circle
-         style="fill:none;stroke:#000000"
-         r="30"
-         id="ellipse124"
-         pointer-events="all"
-         cy="115"
-         cx="395" />
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.20512384;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path12047"
+         cx="-18.541893"
+         cy="237.88593"
+         r="3.0802414" />
     </g>
     <g
-       id="g960">
-      <circle
-         style="fill:#ffffff;stroke:#000000"
-         r="40"
-         id="ellipse40"
-         pointer-events="all"
-         cy="315"
-         cx="395" />
+       id="node_q3"
+       transform="translate(71.757866,35.126615)">
+      <g
+         id="node_q2-6">
+        <circle
+           r="3.6081386"
+           cy="237.88593"
+           cx="-18.541893"
+           id="path815-8-5"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text828-3-1"
+           y="238.98869"
+           x="-21.006857"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;font-family:monospace;-inkscape-font-specification:'monospace Bold';stroke-width:0.26458332"
+             y="238.98869"
+             x="-21.006857"
+             id="tspan826-4-5"
+             sodipodi:role="line">q3</tspan></text>
+        <circle
+           r="3.0802414"
+           cy="237.88593"
+           cx="-18.541893"
+           id="path12047-2"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.20512384;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       id="t_q1,q2,0">
       <text
-         transform="translate(-0.5,-0.5)"
-         style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000"
-         id="text42"
-         font-size="12px"
-         y="319"
-         x="395">q3</text>
+         id="text828-80-6"
+         y="248.03258"
+         x="27.27177"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="248.03258"
+           x="27.27177"
+           id="tspan826-2-9"
+           sodipodi:role="line">Z,ε→ε</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path945"
+         d="M 21.047475,255.07207 49.778948,242.5104"
+         style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker6386)" />
+    </g>
+    <g
+       id="t_q4,q1,0">
+      <text
+         id="text828-80"
+         y="241.40634"
+         x="73.24485"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="241.40634"
+           x="73.24485"
+           id="tspan826-2"
+           sodipodi:role="line">Z,ε→ε</tspan></text>
+      <path
+         sodipodi:nodetypes="cac"
+         inkscape:connector-curvature="0"
+         id="path1265-4-7"
+         d="m 85.933728,253.84485 c 0,0 -6.806502,-8.67371 -11.592633,-11.02596 -5.2436,-2.57707 -17.322545,-2.67568 -17.322545,-2.67568"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6052)" />
+    </g>
+    <g
+       id="t_q3,q2,0">
+      <text
+         id="text828-80-66"
+         y="258.99387"
+         x="60.061203"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="258.99387"
+           x="60.061203"
+           id="tspan826-2-99"
+           sodipodi:role="line">Z,ε→ε</tspan></text>
+      <path
+         sodipodi:nodetypes="cac"
+         inkscape:connector-curvature="0"
+         id="path1265-4-2-9"
+         d="m 55.232973,270.19246 c 0,0 4.447292,-7.59706 4.535993,-11.81461 0.102002,-4.84994 -4.640297,-13.79342 -4.640297,-13.79342"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6182)" />
+    </g>
+    <g
+       id="t_q2,q4,0">
+      <path
+         sodipodi:nodetypes="cac"
+         inkscape:connector-curvature="0"
+         id="path1265-4"
+         d="m 56.451586,242.03309 c 0,0 8.391237,5.97115 13.010051,8.19114 4.787778,2.3012 15.05468,5.22702 15.05468,5.22702"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5928)" />
+      <text
+         id="text828-80-6-7"
+         y="248.41055"
+         x="67.242752"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="248.41055"
+           x="67.242752"
+           id="tspan826-2-9-4"
+           sodipodi:role="line">O,ε→ε</tspan></text>
+    </g>
+    <g
+       id="t_q3,q3,0">
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path1265-1-9"
+         d="m 49.959302,275.65369 c 0,0 -0.360199,5.0776 -5.734013,8.47462 -2.951067,1.8655 -6.929177,-1.48308 -6.562219,-6.36428 0.467377,-6.21698 12.296232,-2.11034 12.296232,-2.11034"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5810-6)" />
+      <text
+         id="text828-80-6-7-0"
+         y="279.63562"
+         x="38.882431"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="279.63562"
+           x="38.882431"
+           id="tspan826-2-9-4-2"
+           sodipodi:role="line">(,ε→X</tspan></text>
+    </g>
+    <g
+       id="t_q1,q3,0">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1229"
+         d="m 20.947249,260.08338 28.497613,12.56166"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5640)" />
+      <text
+         id="text828-80-6-7-9"
+         y="267.82388"
+         x="24.708324"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="267.82388"
+           x="24.708324"
+           id="tspan826-2-9-4-5"
+           sodipodi:role="line">(,ε→X</tspan></text>
+    </g>
+    <g
+       id="t_q4,q3,0">
+      <path
+         sodipodi:nodetypes="cac"
+         inkscape:connector-curvature="0"
+         id="path1265-1"
+         d="m 85.422618,260.61977 c 0,0 -6.646175,7.56304 -11.02568,9.79754 -5.38194,2.74596 -17.700511,3.9041 -17.700511,3.9041"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5810)" />
+      <text
+         id="text828-80-6-7-8"
+         y="272.07614"
+         x="75.45163"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="272.07614"
+           x="75.45163"
+           id="tspan826-2-9-4-57"
+           sodipodi:role="line">(,ε→X</tspan></text>
+    </g>
+    <g
+       id="t_q3,q4,0">
+      <path
+         sodipodi:nodetypes="cac"
+         inkscape:connector-curvature="0"
+         id="path1265"
+         d="m 56.790923,272.43153 c 0,0 10.466417,-6.88678 16.128353,-9.51406 3.580763,-1.66156 11.180425,-3.9041 11.180425,-3.9041"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5698)" />
+      <text
+         id="text828-80-6-7-93"
+         y="267.0679"
+         x="69.18795"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="267.0679"
+           x="69.18795"
+           id="tspan826-2-9-4-54"
+           sodipodi:role="line">),X→ε</tspan></text>
+    </g>
+    <g
+       id="t_q2,q3,0">
+      <path
+         sodipodi:nodetypes="cac"
+         inkscape:connector-curvature="0"
+         id="path1265-4-2"
+         d="m 51.479841,244.87275 c 0,0 -4.589298,7.90109 -4.724984,12.28708 -0.142935,4.62032 4.167827,13.22646 4.167827,13.22646"
+         style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker6318)" />
+      <text
+         id="text828-80-6-7-1"
+         y="257.80753"
+         x="37.815926"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="257.80753"
+           x="37.815926"
+           id="tspan826-2-9-4-6"
+           sodipodi:role="line">),X→ε</tspan></text>
+    </g>
+    <g
+       id="t_q3,q3,1">
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path1265-1-9-0"
+         d="m 54.320279,276.46231 c 0,0 -2.154262,4.61204 0.88965,10.19347 1.671583,3.06507 6.775988,2.0734 8.828842,-2.37031 2.614636,-5.65977 -9.718492,-7.82316 -9.718492,-7.82316"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5810-6-0)" />
+      <text
+         id="text828-80-6-7-13"
+         y="283.41541"
+         x="54.824856"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:monospace;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+           y="283.41541"
+           x="54.824856"
+           id="tspan826-2-9-4-9"
+           sodipodi:role="line">),X→ε</tspan></text>
+    </g>
+    <g
+       transform="translate(71.754188,3.3615787)"
+       id="node_q4">
       <circle
-         style="fill:none;stroke:#000000"
-         r="30"
-         id="ellipse126"
-         pointer-events="all"
-         cy="315"
-         cx="395" />
+         r="3.6081386"
+         cy="254.06415"
+         cx="15.769222"
+         id="path815-7"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.52916664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text828-8"
+         y="255.16692"
+         x="13.229842"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;font-family:monospace;-inkscape-font-specification:'monospace Bold';stroke-width:0.26458332"
+           y="255.16692"
+           x="13.229842"
+           id="tspan826-9"
+           sodipodi:role="line">q4</tspan></text>
     </g>
   </g>
 </svg>

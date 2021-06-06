@@ -1,0 +1,91 @@
+* {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+#button_panel {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  margin: 8px;
+}
+#main_content {
+  display: flex;
+  flex-direction: row;
+}
+table {
+  border-collapse: collapse;
+  flex-grow: 1;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #008cba;
+  color: white;
+}
+.green path {
+  stroke: green !important;
+}
+svg text {
+  font-family: monospace;
+  font-weight: bold;
+  stroke-width: 0.265;
+}
+svg marker path {
+  fill-rule: evenodd;
+  fill: #fff;
+  stroke-width: 1pt;
+  stroke: #000;
+}
+.primary_button {
+  background-color: #008cba;
+  color: white;
+  border: 2px solid #008cba;
+}
+.primary_button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #008cba;
+}
+.secondary_button {
+  background-color: #555555;
+  color: white;
+  border: 2px solid #555555;
+}
+.secondary_button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+.rec_button {
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.sq_button {
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

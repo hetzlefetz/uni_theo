@@ -84,17 +84,18 @@ const setupButtonStates = () => {
 };
 
 async function dostuff() {
-  var aut = new Automaton('(1+1)+(1/(1*1))');
-  var fin = false;
-  while (aut.nextState()) {
-    if (aut.finished()) fin = true;
-  }
-  if (fin) {
-    console.log(aut);
-    console.log('Yay!');
-  } else {
-    console.log('Oh noes ... ');
-  }
+  // var aut = new Automaton('(1+1)+(1/(1*1))');
+  // var fin = false;
+  // while (aut.nextState()) {
+  //   if (aut.finished()) fin = true;
+  // }
+  // if (fin) {
+  //   console.log(aut);
+  //   console.log('Yay!');
+  // } else {
+  //   console.log('Oh noes ... ');
+  // }
+  document.getElementById('t_q3_q3_1').classList.toggle('green');
 }
 async function tourClick() {
   introJs()
@@ -395,6 +396,42 @@ function clearTable() {
     node.removeChild(node.lastChild);
   }
 }
-// window.onload = (event) => {
-//   setupButtonStates();
-// };
+window.onload = (event) => {
+  // var DOTstring = `digraph G
+  // {
+  //   q1 -> q2 [label="Z,ε→ε"]
+  //   q1 -> q3 [label="(,ε→X"]
+  //   q2 -> q3 [label="),X→ε"]
+  //   q2 -> q4 [label="O,ε→ε"]
+  //   q3->q2 [label="Z,ε→ε"]
+  //   q3->q3 [label="(,ε→X"]
+  //   q3->q3 [label="),X→ε"]
+  //   q3->q4 [label="),X→ε"]
+  //   q4->q3 [label="(,ε→X"]
+  //   q4->q2 [label="Z,ε→ε"]
+  // }`;
+  // var parsedData = vis.network.convertDot(DOTstring);
+  // var data = {
+  //   nodes: parsedData.nodes,
+  //   edges: parsedData.edges,
+  // };
+  // var options = {
+  //   layout: {
+  //     randomSeed: undefined,
+  //     improvedLayout:true,
+  //     hierarchical: {
+  //       enabled:false,
+  //       levelSeparation: 150,
+  //       nodeSpacing: 100,
+  //       treeSpacing: 200,
+  //       blockShifting: true,
+  //       edgeMinimization: true,
+  //       parentCentralization: true,
+  //       direction: 'UD',        // UD, DU, LR, RL
+  //       sortMethod: 'hubsize'   // hubsize, directed
+  //     }
+  //   }
+  // }
+  // var container = document.getElementById('mynetwork');
+  // var network = new vis.Network(container, data, options);
+};
