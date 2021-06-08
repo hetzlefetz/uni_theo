@@ -13,18 +13,64 @@
   <body>
     <h1>ESA 3 : Kellerautomat zur Erkennung arithmetischer Ausdrücke</h1>
     <div id="button_panel">
-      <button class="rec_button primary_button">Gültiger Ausdruck</button>
-      <button class="rec_button secondary_button">Ungültiger Ausdruck</button>
+      <button
+        id="btn-genValid"
+        class="rec_button primary_button"
+        onclick="genValid()"
+      >
+        Gültiger Ausdruck
+      </button>
+      <button
+        id="btn-genInvalid"
+        class="rec_button secondary_button"
+        onclick="genInvalid()"
+      >
+        Ungültiger Ausdruck
+      </button>
       <input
         type="text"
         size="50"
         placeholder="Button drücken oder einen Ausdruck eingeben"
+        id="input_expression"
+        onchange="setupButtonStates('STOPPED'); checkInput();"
       />
-      <button class="sq_button secondary_button">&#9199;</button>
-      <button class="sq_button secondary_button">&#8250;</button>
-      <button class="sq_button secondary_button">&#9421;</button>
-      <button class="rec_button secondary_button">Tour</button>
-      <button class="rec_button secondary_button">Dokumentation</button>
+      <button
+        id="btn-play"
+        class="sq_button secondary_button"
+        onclick="playClick();"
+      >
+        &#9654;
+      </button>
+      <button
+        id="btn-pause"
+        class="sq_button secondary_button"
+        onclick="playClick();"
+      >
+        ||
+      </button>
+      <button
+        id="btn-step"
+        class="sq_button secondary_button"
+        onclick="stepClick();"
+      >
+        &#187;
+      </button>
+      <button
+        id="btn-cancel"
+        onClick="window.location.reload();"
+        class="sq_button secondary_button"
+      >
+        &#11035;
+      </button>
+      <select id="drp-speed">
+        <option value="5">Schnell</option>
+        <option value="500">Normal</option>
+        <option value="5000">Langsam</option>
+      </select>
+      <button id="btn-tour" class="rec_button secondary_button">Tour</button>
+      <button id="btn-doc" class="rec_button secondary_button">
+        Dokumentation
+      </button>
     </div>
     <div>
       Der Ausdruck wird mit dem Folgenden Kellerautomaten validiert: K = (Q, Σ,
@@ -126,6 +172,34 @@
               </tspan>
             </text>
           </g>
+
+          <g id="t_q1_q3_0">
+            <marker id="j" style="overflow: visible" orient="auto">
+              <path
+                transform="scale(.8) translate(-6)"
+                d="m5.77 0-8.65 5v-10l8.65 5z"
+              />
+            </marker>
+            <path
+              d="m20.9 260 28.5 12.6"
+              style="
+                fill: none;
+                marker-end: url(#j);
+                stroke-width: 0.265px;
+                stroke: #000;
+              "
+            />
+            <text id="text828-80-6-7-9" x="24.708324" y="267.82388">
+              <tspan
+                id="tspan826-2-9-4-5"
+                x="24.708324"
+                y="267.82388"
+                style="font-size: 2.82px"
+              >
+                (,ε→X
+              </tspan>
+            </text>
+          </g>
           <g id="t_q1_q2_0">
             <marker id="a" style="overflow: visible" orient="auto">
               <path
@@ -157,61 +231,7 @@
               d="m21 255 28.7-12.6"
               style="
                 fill: none;
-                marker-end: url(#d);
-                stroke-width: 0.265px;
-                stroke: #000;
-              "
-            />
-          </g>
-          <g id="t_q4_q1_0">
-            <text id="text828-80" x="73.24485" y="241.40634">
-              <tspan
-                id="tspan826-2"
-                x="73.24485"
-                y="241.40634"
-                style="font-size: 2.82px"
-              >
-                Z,ε→ε
-              </tspan>
-            </text>
-            <marker id="d" style="overflow: visible" orient="auto">
-              <path
-                transform="scale(.8) translate(-6)"
-                d="m5.77 0-8.65 5v-10l8.65 5z"
-              />
-            </marker>
-            <path
-              d="m85.9 254s-6.81-8.67-11.6-11c-5.24-2.58-17.3-2.68-17.3-2.68"
-              style="
-                fill: none;
-                marker-end: url(#d);
-                stroke-width: 0.265px;
-                stroke: #000;
-              "
-            />
-          </g>
-          <g id="t_q3_q2_0">
-            <text id="text828-80-66" x="60.061203" y="258.99387">
-              <tspan
-                id="tspan826-2-99"
-                x="60.061203"
-                y="258.99387"
-                style="font-size: 2.82px"
-              >
-                Z,ε→ε
-              </tspan>
-            </text>
-            <marker id="c" style="overflow: visible" orient="auto">
-              <path
-                transform="scale(.8) translate(-6)"
-                d="m5.77 0-8.65 5v-10l8.65 5z"
-              />
-            </marker>
-            <path
-              d="m55.2 270s4.45-7.6 4.54-11.8c0.102-4.85-4.64-13.8-4.64-13.8"
-              style="
-                fill: none;
-                marker-end: url(#c);
+                marker-end: url(#a);
                 stroke-width: 0.265px;
                 stroke: #000;
               "
@@ -244,6 +264,34 @@
               </tspan>
             </text>
           </g>
+          <g id="t_q2_q3_0">
+            <marker id="b" style="overflow: visible" orient="auto">
+              <path
+                transform="scale(.8) translate(-6)"
+                d="m5.77 0-8.65 5v-10l8.65 5z"
+              />
+            </marker>
+            <path
+              d="m51.5 245s-4.59 7.9-4.72 12.3c-0.143 4.62 4.17 13.2 4.17 13.2"
+              style="
+                fill: none;
+                marker-end: url(#b);
+                stroke-width: 0.265px;
+
+                stroke: #000;
+              "
+            />
+            <text id="text828-80-6-7-1" x="37.815926" y="257.80753">
+              <tspan
+                id="tspan826-2-9-4-6"
+                x="37.815926"
+                y="257.80753"
+                style="font-size: 2.82px"
+              >
+                ),X→ε
+              </tspan>
+            </text>
+          </g>
           <g id="t_q3_q3_0">
             <marker id="g" style="overflow: visible" orient="auto">
               <path
@@ -272,60 +320,32 @@
               </tspan>
             </text>
           </g>
-          <g id="t_q1_q3_0">
-            <marker id="j" style="overflow: visible" orient="auto">
+          <g id="t_q3_q2_0">
+            <text id="text828-80-66" x="60.061203" y="258.99387">
+              <tspan
+                id="tspan826-2-99"
+                x="60.061203"
+                y="258.99387"
+                style="font-size: 2.82px"
+              >
+                Z,ε→ε
+              </tspan>
+            </text>
+            <marker id="c" style="overflow: visible" orient="auto">
               <path
                 transform="scale(.8) translate(-6)"
                 d="m5.77 0-8.65 5v-10l8.65 5z"
               />
             </marker>
             <path
-              d="m20.9 260 28.5 12.6"
+              d="m55.2 270s4.45-7.6 4.54-11.8c0.102-4.85-4.64-13.8-4.64-13.8"
               style="
                 fill: none;
-                marker-end: url(#j);
+                marker-end: url(#c);
                 stroke-width: 0.265px;
                 stroke: #000;
               "
             />
-            <text id="text828-80-6-7-9" x="24.708324" y="267.82388">
-              <tspan
-                id="tspan826-2-9-4-5"
-                x="24.708324"
-                y="267.82388"
-                style="font-size: 2.82px"
-              >
-                (,ε→X
-              </tspan>
-            </text>
-          </g>
-
-          <g id="t_q4_q3_0">
-            <marker id="h" style="overflow: visible" orient="auto">
-              <path
-                transform="scale(.8) translate(-6)"
-                d="m5.77 0-8.65 5v-10l8.65 5z"
-              />
-            </marker>
-            <path
-              d="m85.4 261s-6.65 7.56-11 9.8c-5.38 2.75-17.7 3.9-17.7 3.9"
-              style="
-                fill: none;
-                marker-end: url(#h);
-                stroke-width: 0.265px;
-                stroke: #000;
-              "
-            />
-            <text id="text828-80-6-7-8" x="75.45163" y="272.07614">
-              <tspan
-                id="tspan826-2-9-4-57"
-                x="75.45163"
-                y="272.07614"
-                style="font-size: 2.82px"
-              >
-                (,ε→X
-              </tspan>
-            </text>
           </g>
           <g id="t_q3_q4_0">
             <marker id="i" style="overflow: visible" orient="auto">
@@ -351,34 +371,6 @@
                 style="font-size: 2.82px"
               >
                 O,X→ε
-              </tspan>
-            </text>
-          </g>
-          <g id="t__0">
-            <marker id="b" style="overflow: visible" orient="auto">
-              <path
-                transform="scale(.8) translate(-6)"
-                d="m5.77 0-8.65 5v-10l8.65 5z"
-              />
-            </marker>
-            <path
-              d="m51.5 245s-4.59 7.9-4.72 12.3c-0.143 4.62 4.17 13.2 4.17 13.2"
-              style="
-                fill: none;
-                marker-end: url(#b);
-                stroke-width: 0.265px;
-
-                stroke: #000;
-              "
-            />
-            <text id="text828-80-6-7-1" x="37.815926" y="257.80753">
-              <tspan
-                id="tspan826-2-9-4-6"
-                x="37.815926"
-                y="257.80753"
-                style="font-size: 2.82px"
-              >
-                ),X→ε
               </tspan>
             </text>
           </g>
@@ -409,6 +401,60 @@
               </tspan>
             </text>
           </g>
+          <g id="t_q4_q3_0">
+            <marker id="h" style="overflow: visible" orient="auto">
+              <path
+                transform="scale(.8) translate(-6)"
+                d="m5.77 0-8.65 5v-10l8.65 5z"
+              />
+            </marker>
+            <path
+              d="m85.4 261s-6.65 7.56-11 9.8c-5.38 2.75-17.7 3.9-17.7 3.9"
+              style="
+                fill: none;
+                marker-end: url(#h);
+                stroke-width: 0.265px;
+                stroke: #000;
+              "
+            />
+            <text id="text828-80-6-7-8" x="75.45163" y="272.07614">
+              <tspan
+                id="tspan826-2-9-4-57"
+                x="75.45163"
+                y="272.07614"
+                style="font-size: 2.82px"
+              >
+                (,ε→X
+              </tspan>
+            </text>
+          </g>
+          <g id="t_q4_q2_0">
+            <text id="text828-80" x="73.24485" y="241.40634">
+              <tspan
+                id="tspan826-2"
+                x="73.24485"
+                y="241.40634"
+                style="font-size: 2.82px"
+              >
+                Z,ε→ε
+              </tspan>
+            </text>
+            <marker id="d" style="overflow: visible" orient="auto">
+              <path
+                transform="scale(.8) translate(-6)"
+                d="m5.77 0-8.65 5v-10l8.65 5z"
+              />
+            </marker>
+            <path
+              d="m85.9 254s-6.81-8.67-11.6-11c-5.24-2.58-17.3-2.68-17.3-2.68"
+              style="
+                fill: none;
+                marker-end: url(#d);
+                stroke-width: 0.265px;
+                stroke: #000;
+              "
+            />
+          </g>
         </g>
       </svg>
       <table>
@@ -433,7 +479,7 @@
             <td>ε</td>
             <td>{(q3,X)}</td>
           </tr>
-          <tr id="r__0">
+          <tr id="r_q2_q3_0">
             <td>q2</td>
             <td>)</td>
             <td>X</td>
@@ -485,6 +531,7 @@
       </table>
     </div>
     <script src="./js/intro.min.js"></script>
+    <script src="./js/utils.js"></script>
     <script src="./js/automaton.js"></script>
     <script src="./js/main.js"></script>
   </body>

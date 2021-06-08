@@ -123,7 +123,8 @@ class Automaton {
   }
 
   nextState() {
-    if (this.word.length == 0) return false;
+    var oldstate = this.currentState;
+    if (this.word.length == 0) return { result: false, rule: null };
     var input = this.word.charAt(0);
 
     for (var i = 0; i < this.currentState.follower.length; i++) {
@@ -131,7 +132,7 @@ class Automaton {
         rules[`${this.currentState.name},${this.currentState.follower[i]}`];
 
       if (!rulesByName) {
-        return false;
+        return { result: false, rule: null };
       }
       if (!Array.isArray(rulesByName)) {
         rulesByName = [rulesByName];
@@ -144,22 +145,34 @@ class Automaton {
           if (rule.writeCellar) {
             this.cellar.push(rule.writeCellar);
           }
-          return true;
+
+          return {
+            result: true,
+            rule: `${oldstate.name}_${oldstate.follower[i]}_${j}`,
+          };
         }
         if (this.read(input, rule.read) && rule.readCellar) {
           var cellarValue = this.cellar.pop();
+
           if (!cellarValue) {
-            return false;
+            return {
+              result: false,
+              rule: `${oldstate.name}_${oldstate.follower[i]}_${j}`,
+            };
           }
           this.word = this.word.substring(1);
           this.currentState = rule.next;
           if (rule.writeCellar) {
             this.cellar.push(rule.writeCellar);
           }
-          return true;
+
+          return {
+            result: true,
+            rule: `${oldstate.name}_${oldstate.follower[i]}_${j}`,
+          };
         }
       }
     }
-    return false;
+    return { result: false, rule: null };
   }
 }
