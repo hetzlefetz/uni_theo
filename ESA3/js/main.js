@@ -90,17 +90,17 @@ async function tourClick() {
     })
     .start();
 }
-const aut = null;
+var aut = null;
 async function playClick() {
   pauseRequested = false;
   var lastNode = 'q1';
   var lastEdge = '';
 
   setupButtonStates('RUNNING');
-  
+
   resetColors();
   var input = document.getElementById('input_expression').value;
-   aut = new Automaton(input);
+  aut = new Automaton(input);
   var fin = false;
 
   document
@@ -145,9 +145,7 @@ async function playClick() {
 
   setupButtonStates('STOPPED');
 }
-async function stepClick() {
-
-}
+async function stepClick() {}
 
 /*
  
