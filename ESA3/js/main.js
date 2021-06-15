@@ -11,6 +11,7 @@ var speed = {
 };
 var appState = appStates.STOPPED;
 var currentSpeed = speed.Normal;
+var stepWord = 'foo';
 
 const initialState = Object.freeze('F');
 var currentState = initialState;
@@ -36,34 +37,41 @@ async function tourClick() {
     .setOptions({
       steps: [
         {
-          intro: 'Intro für den Arithmetik Generator',
+          intro: 'Intro für den Arithmetik Validator',
+        },
+        {
+          element: document.querySelector('#btn-genValid'),
+          intro: 'Generiert eine valide Artithmetik',
+        },
+        {
+          element: document.querySelector('#btn-genInvalid'),
+          intro: 'Generiert eine invalide Artithmetik',
+        },
+        {
+          element: document.querySelector('#input'),
+          intro: 'Hier kann ein zu validierender Ausdruck angegeben werden',
         },
         {
           element: document.querySelector('#btn-play'),
-          intro: 'Startet das automatische generieren der Arithmetik',
+          intro: 'Startet das automatische validieren der Arithmetik',
         },
         {
           element: document.querySelector('#btn-pause'),
           intro:
-            'Pausiert die generierung. Zum erneuten starten einfach Play drücken',
+            'Pausiert die Validierung. Zum erneuten starten einfach Play drücken',
         },
         {
           element: document.querySelector('#btn-step'),
-          intro: 'Startet das schrittweise generieren der Arithmetik',
+          intro: 'Startet das schrittweise validieren der Arithmetik',
         },
         {
           element: document.querySelector('#btn-cancel'),
           intro:
-            'Bricht das generieren ab und versetzt die Applikation in den Initialzustand',
+            'Bricht das validieren ab und versetzt die Applikation in den Initialzustand',
         },
         {
           element: document.querySelector('#drp-speed'),
-          intro: 'Hier kann die Animationsgeschwindigkeit gewähltwerden',
-        },
-        {
-          element: document.querySelector('#btn-genInvalid'),
-          intro:
-            'Generiert einen ungüligen ausdruck indem ein gültiger ausdruck generiert wird und ein zeichen gelöscht wird',
+          intro: 'Hier kann die Animationsgeschwindigkeit gewählt werden',
         },
         {
           element: document.querySelector('#btn-tour'),
@@ -74,17 +82,16 @@ async function tourClick() {
           intro: 'Weiterführende informationen zu dieser Anwendung',
         },
         {
-          element: document.querySelector('#output'),
-          intro:
-            'Hier erscheint der generierte ausdruck / werden status informationen angezeigt',
+          element: document.querySelector('#graph'),
+          intro: 'Der Kellerautomat als Graph',
         },
         {
           element: document.querySelector('#output-table'),
           intro: 'Hier kann die generierung schrittweise nachvollzogen werden',
         },
         {
-          element: document.querySelector('#grammar'),
-          intro: 'Die Grammatik die dieser anwendung zu Grunde liegt',
+          element: document.querySelector('#cellar-table'),
+          intro: 'Hier kann der aktuelle zustand des Kellers gesehen werden',
         },
       ],
     })
@@ -95,8 +102,8 @@ async function playClick() {
   pauseRequested = false;
   var lastNode = 'q1';
   var lastEdge = '';
-
-  setupButtonStates('RUNNING');
+  appState = 'RUNNING';
+  setupButtonStates();
 
   resetColors();
   var input = document.getElementById('input_expression').value;
@@ -142,16 +149,87 @@ async function playClick() {
       document.getElementById('r_' + lastEdge).classList.add('red', 'pulsing');
     }
   }
-
-  setupButtonStates('STOPPED');
+  appState = 'STOPPED';
+  setupButtonStates(true);
 }
-async function stepClick() {}
+var lastStepNode = 'q1';
+var lastStepEdge = '';
+
+function stepClick() {
+  if (appState == 'STOPPED') {
+    appState = 'STEP';
+    setupButtonStates();
+    var input = document.getElementById('input_expression').value;
+    aut = new Automaton(input);
+    resetColors();
+    document.getElementById('node_q1').classList.toggle('green');
+  }
+
+  var res = aut.nextState();
+
+  document.getElementById('node_' + lastStepNode).classList.toggle('green');
+  if (lastStepEdge.length > 0) {
+    document.getElementById('t_' + lastStepEdge).classList.toggle('green');
+    document.getElementById('r_' + lastStepEdge).classList.toggle('green');
+  }
+
+  lastStepNode = aut.currentState.name;
+  lastStepEdge = res.rule;
+
+  document.getElementById('node_' + lastStepNode).classList.toggle('green');
+  if (lastStepEdge.length > 0) {
+    console.log('r_' + lastStepEdge);
+
+    document.getElementById('t_' + lastStepEdge).classList.toggle('green');
+    document.getElementById('r_' + lastStepEdge).classList.toggle('green');
+  }
+  var fin = false;
+  if (aut.word.length == 0) {
+    fin = aut.finished();
+  } else {
+    return;
+  }
+
+  if (fin) {
+    document.getElementById('input_expression').value = '';
+    alert('Erfolgreich beendet');
+
+    document.getElementById('node_' + lastStepNode).classList.add('green');
+    document
+      .getElementById('t_' + lastStepEdge)
+      .classList.add('green', 'pulsing');
+    document
+      .getElementById('r_' + lastStepEdge)
+      .classList.add('green', 'pulsing');
+    lastStepEdge = '';
+    lastStepNode = 'q1';
+    appState = 'STOPPED';
+    setupButtonStates(true);
+  } else {
+    alert('Mit fehler beendet!');
+    document.getElementById('input_expression').value = '';
+    document.getElementById('node_' + lastStepNode).classList.add('red');
+    if (lastStepEdge.length > 0) {
+      document
+        .getElementById('t_' + lastStepEdge)
+        .classList.add('red', 'pulsing');
+      document
+        .getElementById('r_' + lastStepEdge)
+        .classList.add('red', 'pulsing');
+    }
+    lastStepEdge = '';
+    lastStepNode = 'q1';
+    appState = 'STOPPED';
+    setupButtonStates(true);
+  }
+}
 
 /*
  
 */
 async function genValid() {
-  setupButtonStates('RUNNING');
+  appState = 'RUNNING';
+  setupButtonStates();
   currentState = initialState;
   while (!isTerminal(currentState)) {
     currentState = nextState(currentState);
@@ -159,17 +237,17 @@ async function genValid() {
       alert('Maximale länge überschritten');
       break;
     }
-
-    console.log(currentState);
   }
-  console.log('done');
+
   document.getElementById('input_expression').value = currentState;
-  setupButtonStates('STOPPED', true);
+  appState = 'STOPPED';
+  setupButtonStates(true);
 }
 
 function genInvalid() {
   pauseRequested = false;
-  setupButtonStates('RUNNING');
+  appState = 'RUNNING';
+  setupButtonStates();
   currentState = initialState;
   while (!isTerminal(currentState)) {
     currentState = nextState(currentState);
@@ -178,8 +256,6 @@ function genInvalid() {
       break;
     }
   }
-  console.log('done');
-
   if (currentState.length == 1) {
     currentState = '-';
   } else {
@@ -189,16 +265,10 @@ function genInvalid() {
     );
   }
   document.getElementById('input_expression').value = currentState;
-  setupButtonStates('STOPPED', true);
+  appState = 'STOPPED';
+  setupButtonStates(true);
 }
 
-function isTerminal(value) {
-  if (value.includes('A')) return false;
-  if (value.includes('F')) return false;
-  if (value.includes('Z')) return false;
-
-  return true;
-}
 function nextState(state) {
   state = state.replaceAll('F', () => {
     if (state.length > 100) {
@@ -227,5 +297,6 @@ function nextState(state) {
 }
 
 window.onload = (event) => {
-  setupButtonStates('STOPPED');
+  appState = 'STOPPED';
+  setupButtonStates();
 };

@@ -96,7 +96,6 @@ class Automaton {
   finished() {
     return this.word.length == 0 && this.currentState.isEnd;
   }
-
   read(input, readType) {
     switch (readType) {
       case 'Z':
@@ -144,6 +143,7 @@ class Automaton {
           this.currentState = rule.next;
           if (rule.writeCellar) {
             this.cellar.push(rule.writeCellar);
+            insertRow();
           }
 
           return {
@@ -153,6 +153,7 @@ class Automaton {
         }
         if (this.read(input, rule.read) && rule.readCellar) {
           var cellarValue = this.cellar.pop();
+          deleteRow();
 
           if (!cellarValue) {
             return {
@@ -164,6 +165,7 @@ class Automaton {
           this.currentState = rule.next;
           if (rule.writeCellar) {
             this.cellar.push(rule.writeCellar);
+            insertRow();
           }
 
           return {

@@ -64,6 +64,7 @@ function resetColors() {
   for (var i = 0; i < x.length; i++) {
     x.item(i).classList.remove('red');
   }
+  clearTable();
 }
 
 const checkInput = () => {
@@ -75,11 +76,17 @@ const checkInput = () => {
     input.classList.add('invalid');
   }
 };
+function isTerminal(value) {
+  if (value.includes('A')) return false;
+  if (value.includes('F')) return false;
+  if (value.includes('Z')) return false;
 
+  return true;
+}
 /**
  * Sets up the buttons according to the current app state
  */
-const setupButtonStates = (appState, forceEnable) => {
+const setupButtonStates = (forceEnable) => {
   switch (appState) {
     case appStates.PAUSED:
       enableElement('btn-play', 'btn-cancel');
@@ -131,6 +138,7 @@ const setupButtonStates = (appState, forceEnable) => {
         disableElement('btn-play', 'btn-step');
       }
       enableElement(
+        'btn-cancel',
         'input_expression',
         'drp-speed',
         'btn-genInvalid',
@@ -138,7 +146,7 @@ const setupButtonStates = (appState, forceEnable) => {
         'btn-tour',
         'btn-doc',
       );
-      disableElement('btn-pause', 'btn-cancel');
+      disableElement('btn-pause');
       break;
   }
 };
@@ -156,4 +164,21 @@ function getRandomIntInclusive(min, max) {
 }
 function removeByIndex(str, index) {
   return str.slice(0, index) + str.slice(index + 1);
+}
+function insertRow() {
+  var table = document.getElementById('cellar-table');
+  var row = table.insertRow();
+  var cell0 = row.insertCell(0);
+  cell0.innerHTML = 'X';
+}
+function deleteRow() {
+  var table = document.getElementById('cellar-table');
+  var rowCount = table.rows.length;
+  table.deleteRow(rowCount - 1);
+}
+function clearTable() {
+  var node = document.getElementById('cellar-table-body');
+  while (node.hasChildNodes()) {
+    node.removeChild(node.lastChild);
+  }
 }
