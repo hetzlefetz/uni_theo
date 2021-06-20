@@ -182,3 +182,9 @@ function clearTable() {
     node.removeChild(node.lastChild);
   }
 }
+function tryAddClass(elementId, ...classes) {
+  var elem = document.getElementById(elementId);
+  if (elem) {
+    elem.classList.add(...classes);
+  }
+}

@@ -15,7 +15,7 @@ const q3 = {
 };
 const q4 = {
   name: 'q4',
-  follower: ['q2', 'q3'],
+  follower: ['q2', 'q3', 'q4'],
   isEnd: false,
 };
 const rules = {
@@ -49,20 +49,13 @@ const rules = {
     writeCellar: null,
     next: q2,
   },
-  'q3,q3': [
-    {
-      read: '(',
-      readCellar: null,
-      writeCellar: 'X',
-      next: q3,
-    },
-    {
-      read: ')',
-      readCellar: 'X',
-      writeCellar: null,
-      next: q3,
-    },
-  ],
+  'q3,q3': {
+    read: '(',
+    readCellar: null,
+    writeCellar: 'X',
+    next: q3,
+  },
+
   'q3,q4': {
     read: 'O',
     readCellar: null,
@@ -82,6 +75,12 @@ const rules = {
     writeCellar: 'X',
     next: q3,
   },
+  'q4,q4': {
+    read: ')',
+    readCellar: 'X',
+    writeCellar: null,
+    next: q4,
+  },
 };
 
 class Automaton {
@@ -94,7 +93,11 @@ class Automaton {
   }
 
   finished() {
-    return this.word.length == 0 && this.currentState.isEnd;
+    return (
+      this.word.length == 0 &&
+      this.currentState.isEnd &&
+      this.cellar.length == 0
+    );
   }
   read(input, readType) {
     switch (readType) {
@@ -175,6 +178,6 @@ class Automaton {
         }
       }
     }
-    return { result: false, rule: null };
+    return { result: false, rule: [] };
   }
 }

@@ -13,24 +13,9 @@ var appState = appStates.STOPPED;
 var currentSpeed = speed.Normal;
 var stepWord = 'foo';
 
-const initialState = Object.freeze('F');
-var currentState = initialState;
 var pauseRequested = false;
 var currentStep = 0;
-const states = Object.freeze({
-  S: {
-    followers: ['FOF', 'A', 'Z'],
-  },
-  Z: {
-    followers: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
-  },
-  O: {
-    followers: ['+', '-', '*', '/'],
-  },
-  A: {
-    followers: ['(F)'],
-  },
-});
+var aut = null;
 
 async function tourClick() {
   introJs()
@@ -97,7 +82,7 @@ async function tourClick() {
     })
     .start();
 }
-var aut = null;
+
 async function playClick() {
   pauseRequested = false;
   var lastNode = 'q1';
@@ -106,7 +91,7 @@ async function playClick() {
   setupButtonStates();
 
   resetColors();
-  var input = document.getElementById('input_expression').value;
+  var input = document.getElementById('input_expression').value.trim();
   aut = new Automaton(input);
   var fin = false;
 
@@ -138,16 +123,15 @@ async function playClick() {
     if (aut.finished()) fin = true;
     res = aut.nextState();
   }
+  resetColors();
   if (fin) {
-    document.getElementById('node_' + lastNode).classList.add('green');
-    document.getElementById('t_' + lastEdge).classList.add('green', 'pulsing');
-    document.getElementById('r_' + lastEdge).classList.add('green', 'pulsing');
+    tryAddClass('node_' + lastNode, 'green');
+    tryAddClass('r_' + lastEdge, 'green', 'pulsing');
+    tryAddClass('t_' + lastEdge, 'green', 'pulsing');
   } else {
-    document.getElementById('node_' + lastNode).classList.add('red');
-    if (lastEdge.length > 0) {
-      document.getElementById('t_' + lastEdge).classList.add('red', 'pulsing');
-      document.getElementById('r_' + lastEdge).classList.add('red', 'pulsing');
-    }
+    tryAddClass('node_' + lastNode, 'red');
+    tryAddClass('r_' + lastEdge, 'red', 'pulsing');
+    tryAddClass('t_' + lastEdge, 'red', 'pulsing');
   }
   appState = 'STOPPED';
   setupButtonStates(true);
@@ -159,7 +143,7 @@ function stepClick() {
   if (appState == 'STOPPED') {
     appState = 'STEP';
     setupButtonStates();
-    var input = document.getElementById('input_expression').value;
+    var input = document.getElementById('input_expression').value.trim();
     aut = new Automaton(input);
     resetColors();
     document.getElementById('node_q1').classList.toggle('green');
@@ -227,73 +211,22 @@ function stepClick() {
 /*
  
 */
-async function genValid() {
+function genValid() {
   appState = 'RUNNING';
   setupButtonStates();
-  currentState = initialState;
-  while (!isTerminal(currentState)) {
-    currentState = nextState(currentState);
-    if (currentState.length > 10000) {
-      alert('Maximale länge überschritten');
-      break;
-    }
-  }
-
-  document.getElementById('input_expression').value = currentState;
+  document.getElementById('input_expression').value =
+    new Generator().generateValid();
   appState = 'STOPPED';
   setupButtonStates(true);
 }
 
 function genInvalid() {
-  pauseRequested = false;
   appState = 'RUNNING';
   setupButtonStates();
-  currentState = initialState;
-  while (!isTerminal(currentState)) {
-    currentState = nextState(currentState);
-    if (currentState.length > 10000) {
-      alert('Maximale länge überschritten');
-      break;
-    }
-  }
-  if (currentState.length == 1) {
-    currentState = '-';
-  } else {
-    currentState = removeByIndex(
-      currentState,
-      getRandomIntInclusive(0, currentState.length - 1),
-    );
-  }
-  document.getElementById('input_expression').value = currentState;
+  document.getElementById('input_expression').value =
+    new Generator().generateInvalid();
   appState = 'STOPPED';
   setupButtonStates(true);
-}
-
-function nextState(state) {
-  state = state.replaceAll('F', () => {
-    if (state.length > 100) {
-      return 'Z';
-    }
-    followers = shuffle(states.S.followers);
-    return followers[0];
-  });
-
-  state = state.replaceAll('O', () => {
-    followers = shuffle(states.O.followers);
-    return followers[0];
-  });
-
-  state = state.replaceAll('A', () => {
-    followers = shuffle(states.A.followers);
-    return followers[0];
-  });
-
-  state = state.replaceAll('Z', () => {
-    var val = getRandomIntInclusive(0, 9);
-    return val;
-  });
-
-  return state;
 }
 
 window.onload = (event) => {
