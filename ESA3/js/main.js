@@ -112,6 +112,13 @@ async function playClick() {
 
     lastNode = aut.currentState.name;
     lastEdge = res.rule;
+    if (lastEdge == 'q3_q4_1') {
+      lastEdge = 'q3_q4_0';
+    }
+
+    if (lastEdge == 'q4_q3_1') {
+      lastEdge = 'q4_q3_0';
+    }
     console.log(lastEdge);
     document.getElementById('node_' + lastNode).classList.toggle('green');
     if (lastEdge.length > 0) {
@@ -159,7 +166,13 @@ function stepClick() {
 
   lastStepNode = aut.currentState.name;
   lastStepEdge = res.rule;
+  if (lastEdge == 'q3_q4_1') {
+    lastEdge = 'q3_q4_0';
+  }
 
+  if (lastEdge == 'q4_q3_1') {
+    lastEdge = 'q4_q3_0';
+  }
   document.getElementById('node_' + lastStepNode).classList.toggle('green');
   if (lastStepEdge.length > 0) {
     console.log('r_' + lastStepEdge);
